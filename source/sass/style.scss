@@ -1,3 +1,9 @@
+@import "base/normalize";
+@import "base/font";
+@import "base/visually-hidden";
+@import "base/variables";
+
 h1 {
   color: red;
+  font-family: "Open Sans", "Arial", sans-serif;
 }

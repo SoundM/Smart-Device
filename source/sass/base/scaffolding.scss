@@ -24,3 +24,10 @@ img {
   height: auto;
   display: block;
 }
+
+.wrapper {
+  @include mp-reset;
+  margin: 0 auto;
+  padding: 0 12px;
+  position: relative;
+}

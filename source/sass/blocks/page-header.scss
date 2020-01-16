@@ -1,30 +1,43 @@
 .page-header {
   @include mp-reset;
   min-height: 878px;
-  background-image: url("../../img/header.png");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-color: #f9f9f9;
-  background-size: 1920px 878px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1415px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  //background-image: url("../../img/header.png");
+  //background-repeat: no-repeat;
+  //background-position: 50% 0;
+  //background-color: #f9f9f9;
+  background-size: 1920px 878px;
+
+  &::after {
+    content: "";
+    background-image: url("../../img/device.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 705px;
+    height: 515px;
+    bottom: 106px;
+    right: 176px;
+    z-index: 2;
+  }
 
   &__nav {
     min-height: 85px;
     padding-top: 33px;
-    padding-left: 13.2%;
-    padding-right: 13.2%;
   }
 
   &__content {
-    min-height: 760px;
-    padding-left: 13.1%;
+    min-height: 725px;
     padding-right: 9.2%;
-    background-image: url("../../img/device.png");
-    background-repeat: no-repeat;
-    background-position: 85.4%;
-    background-size: 705px 515px;
+    padding-top: 35px;
+    //  background-image: url("../../img/device.png");
+    //  background-repeat: no-repeat;
+    //  background-position: 110.5%;
+    //  background-size: 705px 515px;
   }
 }
 

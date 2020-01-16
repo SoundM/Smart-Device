@@ -2,8 +2,21 @@
 @import "base/font";
 @import "base/visually-hidden";
 @import "base/variables";
+@import "base/mixins";
+@import "base/scaffolding";
+@import "blocks/page-header";
+@import "blocks/menu";
+@import "blocks/header-content";
+@import "blocks/outlines";
+
 
 h1 {
   color: red;
-  font-family: "Open Sans", "Arial", sans-serif;
+
+
+  font-family: $font-family-Open-Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
 }

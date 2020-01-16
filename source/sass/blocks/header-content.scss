@@ -1,0 +1,78 @@
+.header-content {
+  @include mp-reset;
+  width: 750px;
+  margin-top: 168px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+    font-family: $font-family-Roboto-Condensed-bold;
+    font-size: 80px;
+    line-height: 19px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+
+    color: $font-white;
+  }
+
+  &__subtitle {
+    margin-left: 95px;
+    font-family: $font-family-PT-Mono;
+    font-size: 22px;
+    line-height: 34px;
+
+    color: $font-white;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 45px;
+      height: 2px;
+      background: #ffffff;
+      border: solid #ffffff;
+      border-width: 0 10px;
+      margin-left: -93px;
+      margin-right: 30px;
+    }
+  }
+
+  &__link1 {
+    display: block;
+    margin-top: 44px;
+    margin-left: 96px;
+    padding-top: 17px;
+    width: 406px;
+    height: 55px;
+    font-family: $font-family-Roboto-Condensed-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: $font-white;
+
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: $bg-blue;
+  }
+
+  &__link2 {
+    width: 95px;
+    height: 17px;
+    margin-left: -38px;
+    margin-top: 132px;
+    font-family: $font-family-PT-Mono;
+    font-size: 14px;
+    line-height: 16px;
+    color: $font-white;
+
+    opacity: 0.5;
+    transform: rotate(-90deg);
+  }
+}

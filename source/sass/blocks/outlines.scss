@@ -1,0 +1,7 @@
+@media (min-width: $desktop-width-min) {
+  body {
+    width: 100%;
+    background: $bg url("../../img/smartDevice.png") no-repeat 50% 0;
+    background-size: 1920px auto;
+  }
+}

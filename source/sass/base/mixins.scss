@@ -1,0 +1,29 @@
+@mixin mp-reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 281px;
+  height: 55px;
+  border: solid 3px;
+  border-radius: 28px;
+
+  text-decoration: none;
+  font-family: $font-family-Open-Sans;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+
+  cursor: pointer;
+  outline: none;
+}

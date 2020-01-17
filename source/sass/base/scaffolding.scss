@@ -29,5 +29,29 @@ img {
   @include mp-reset;
   margin: 0 auto;
   padding: 0 12px;
+  background-image: url("../../img/header.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-color: #f9f9f9;
+  background-size: 1920px 878px;
+}
+
+.wrapper2 {
+  @include mp-reset;
   position: relative;
+  margin: 0 auto;
+  max-width: 1566px;
+  min-height: 878px;
+
+  &::after {
+    content: "";
+    background-image: url("../../img/device.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 705px;
+    height: 515px;
+    top: 255px;
+    right: 0;
+    z-index: 2;
+  }
 }

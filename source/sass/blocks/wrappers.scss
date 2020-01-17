@@ -2,10 +2,23 @@
   @include mp-reset;
   margin: 0 auto;
   padding: 0 12px;
+  min-height: 881px;
   background-image: url("../../img/device.png"), url("../../img/header.png");
   //background-image: url("../../img/device.png");
   background-repeat: no-repeat, no-repeat;
   background-position: calc(450px + 48.3%) 255px, 50% 0;
-  background-size: 705px 515px, 1920px 878px;
-  background-color: transparent;
+  background-size: 705px 515px, 1920px 881px;
+  //background-color: transparent;
+}
+
+.wrapper-advantages {
+  @include mp-reset;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  min-height: 1374px;
+  background-image: url("../../img/advantages.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 1920px 1347px;
+  background-color: $bg-white;
 }

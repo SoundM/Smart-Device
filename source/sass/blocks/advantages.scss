@@ -1,0 +1,112 @@
+.advantages__content {
+  @include mp-reset;
+  margin: 0 auto;
+  max-width: 1170px;
+  padding: 0 12px;
+}
+
+.advantages__menu {
+  @include list-reset;
+  padding-top: 108px;
+  background-color: $bg-white;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.advantages__item {
+  @include mp-reset;
+  width: 41.6%;
+  max-width: 570px;
+  min-height: 257px;
+  margin-bottom: 30px;
+  border: 1px solid #ebebeb;
+  border-left: 2px solid #00b2ff;
+  padding: 40px 40px 0 41px;
+  background-color: $bg-white;
+
+  &--title {
+    font-family: $font-family-Roboto;
+    font-size: 24px;
+    line-height: 22px;
+    color: $font-blue;
+  }
+
+  &--content {
+    font-family: $font-family-PT-Mono;
+    font-size: 16px;
+    line-height: 22px;
+    color: $font-black;
+  }
+}
+
+.advantages__item:hover,
+.advantages__item:hover svg,
+.advantages__item:hover h3,
+.advantages__item:hover p {
+  fill: $bg-white;
+  background-color: $bg-blue;
+  color: $font-white;
+}
+
+.advantages__about-us {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+}
+
+.advantages__about-us--logo {
+  width: 560px;
+  height: 330px;
+  background-image: url("../../img/mask-group.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-color: $bg-white;
+}
+
+.advantages__about-us-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0 10px 0 7px;
+
+  &--title {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: $font-family-Roboto;
+    font-size: 36px;
+    line-height: 51px;
+    color: $font-black;
+  }
+
+  &--content {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+    font-family: $font-family-PT-Mono;
+    font-size: 16px;
+    line-height: 22px;
+    color: $font-black;
+  }
+
+  &--button {
+    margin-top: 29px;
+    padding-top: 14px;
+    width: 180px;
+    height: 45px;
+    border: 1px solid $bg-blue;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: $bg-white;
+
+    font-family: $font-family-Roboto-Condensed-bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $font-blue;
+  }
+}

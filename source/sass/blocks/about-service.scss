@@ -1,0 +1,67 @@
+.about-service {
+  @include mp-reset;
+  background-color: $bg-black;
+
+  &__title {
+    font-family: $font-family-Roboto;
+    font-size: 36px;
+    line-height: 51px;
+  }
+}
+
+.about-service__menu {
+  @include list-reset;
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-service__item {
+  width: 32%;
+  max-width: 370px;
+  min-height: 620px;
+  background-color: $bg-black;
+
+  &--img {
+    height: 100%;
+    opacity: 0.2;
+  }
+
+  &--title {
+    display: inline-block;
+    margin: 0;
+    margin-top: 50px;
+    vertical-align: middle;
+    width: 170px;
+    padding-left: 43px;
+    font-family: $font-family-Roboto;
+    font-size: 20px;
+    line-height: 30px;
+    color: $font-white;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &--enter {
+    display: inline-block;
+    vertical-align: middle;
+    width: 63px;
+    height: 63px;
+    right: 0;
+    bottom: 0;
+    background-color: $bg-blue;
+    position: absolute;
+
+    & img {
+      margin: auto;
+      margin-top: 30px;
+    }
+  }
+}
+
+.about-service__item-content {
+  position: relative;
+  width: 100%;
+}

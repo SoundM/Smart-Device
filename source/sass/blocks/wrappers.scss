@@ -2,32 +2,47 @@
   @include mp-reset;
   margin: 0 auto;
   padding: 0 12px;
-  min-height: 881px;
+  min-height: 878px;
   background-image: url("../../img/device.png"), url("../../img/header.png");
   //background-image: url("../../img/device.png");
   background-repeat: no-repeat, no-repeat;
-  background-position: calc(450px + 48.3%) 255px, 50% 0;
+  background-position: calc(450px + 48.3%) 260px, 50% 0;
   background-size: 705px 515px, 1920px 881px;
 }
 
 .wrapper-advantages {
   @include mp-reset;
   margin: 0 auto;
-  min-height: 1230px;
+  box-sizing: border-box;
+  min-height: 1263px;
   background-image: url("../../img/advantages.svg");
   background-repeat: no-repeat;
   background-position: 50% -30px;
   background-size: 1920px 1347px;
   background-color: $bg-white;
+  //background-color: transparent;
 }
 
 .wrapper-about-service {
   @include mp-reset;
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: 1174px;
   padding: 0 12px;
-  padding-top: 90px;
-  min-height: 938px;
+  padding-top: 59px;
+  min-height: 883px;
   background-color: $bg-black;
   //background: transparent;
+}
+
+.wrapper-support {
+  @include mp-reset;
+  margin: 0 auto;
+  padding: 0 12px;
+  min-height: 668px;
+  background-image: url("../../img/paper_airplane.png"), url("../../img/form.png");
+  //background-image: url("../../img/paper_airplane.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: calc(50% - 354px) 155px, 50% -30px;
+  background-size: 511px 288px, 1920px 670px;
+  background-color: $bg-blue;
 }

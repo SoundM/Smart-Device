@@ -1,0 +1,213 @@
+.support__wrapper {
+  @include mp-reset;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.support__content {
+  @include mp-reset;
+  width: 572px;
+  margin-right: 0;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  &--title {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    margin-top: 87px;
+    margin-bottom: 11px;
+    font-family: $font-family-Roboto;
+    font-size: 36px;
+    line-height: 51px;
+    color: $font-white;
+  }
+
+  &--content {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    margin-bottom: 50px;
+    font-family: $font-family-PT-Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: $font-white;
+  }
+}
+
+.support form {
+  @include mp-reset;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.support__name,
+.support__phone-numbers {
+  width: 268px;
+  box-sizing: border-box;
+  padding-left: 17px;
+  display: flex;
+  background-color: $bg-white-opacity;
+
+  & label {
+    display: block;
+    box-sizing: border-box;
+    height: 50px;
+    margin: auto;
+    margin-left: 0;
+    padding: 0;
+    padding-right: 10px;
+    font-family: $font-family-PT-Mono;
+    font-size: 16px;
+    line-height: 48px;
+    color: $font-white;
+    background-color: $bg-white-opacity;
+  }
+
+  & input {
+    width: 220px;
+    display: block;
+    box-sizing: border-box;
+    margin: auto;
+    margin-left: 0;
+    padding: 0;
+    height: 50px;
+    outline: none;
+    border: none;
+    font-family: $font-family-PT-Mono;
+    font-size: 16px;
+    line-height: 22px;
+    color: $font-white;
+    background-color: $bg-white-opacity;
+
+    &::placeholder {
+      font-family: $font-family-PT-Mono;
+      font-size: 16px;
+      line-height: 22px;
+      color: $font-white;
+      background-color: $bg-white-opacity;
+    }
+  }
+}
+
+.support__phone-numbers input {
+  width: 100%;
+}
+
+.support__more-info {
+  width: 100%;
+  margin-top: 38px;
+  margin-bottom: 45px;
+  font-family: $font-family-PT-Mono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $font-white;
+  display: flex;
+  flex-direction: column;
+  background-color: $bg-white-opacity;
+
+  & label {
+    display: block;
+    box-sizing: border-box;
+    height: 45px;
+    margin: auto;
+    margin-left: 0;
+    padding: 0;
+    padding-left: 18px;
+    font-family: $font-family-PT-Mono;
+    font-size: 16px;
+    line-height: 48px;
+    color: $font-white;
+  }
+
+  & textarea {
+    @include mp-reset;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    background-color: $bg-white-opacity;
+    outline: none;
+    border: none;
+
+    &::placeholder {
+      font-family: $font-family-PT-Mono;
+      font-size: 16px;
+      line-height: 22px;
+      color: $font-white;
+    }
+  }
+}
+
+.support__button {
+  width: 270px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  height: 45px;
+  border: 1px solid $bg-white;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: $bg-blue;
+
+  font-family: $font-family-Roboto-Condensed-bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $font-white;
+}
+
+.support__agree {
+  width: 272px;
+  font-family: $font-family-PT-Mono;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: $font-white;
+  opacity: 0.8;
+}
+
+.support__agree label {
+  position: relative;
+  display: block;
+  padding-top: 7px;
+  padding-left: 45px;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.support__agree input + label::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 9px;
+  background-image: url("../../img/checked-off.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  user-select: none;
+}
+
+.support__agree input:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 9px;
+  background-image: url("../../img/checked-on.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  user-select: none;
+}
+
+
+//.filter-input-checkbox:focus + label {
+//  color: #e984b0;
+//}

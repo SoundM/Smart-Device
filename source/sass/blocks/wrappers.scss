@@ -46,3 +46,25 @@
   background-size: 511px 288px, 1920px 670px;
   background-color: $bg-blue;
 }
+
+.wrapper-footer {
+  @include mp-reset;
+  margin: 0 auto;
+  max-width: 1416px;
+  padding: 0 12px;
+  padding-top: 63px;
+  min-height: 190px;
+  //background-color: $bg-white;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper-footer-footer {
+  @include mp-reset;
+  margin: 0 auto;
+  max-width: 1412px;
+  padding: 0 12px;
+  min-height: 29px;
+  padding-top: 13px;
+}

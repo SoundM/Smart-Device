@@ -1,0 +1,154 @@
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 240px;
+  margin-right: 13%;
+}
+
+.footer__link-logo {
+  @include mp-reset;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 54px;
+
+  & div {
+    padding-top: 5px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  &--name {
+    font-family: $font-family-Roboto-Condensed-bold;
+    font-size: 25px;
+    line-height: 29px;
+    color: #203c42;
+  }
+
+  &--content {
+    font-family: $font-family-Roboto;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #788891;
+  }
+}
+
+
+.footer__social-menu {
+  @include list-reset;
+  display: flex;
+  justify-content: start;
+}
+
+.footer__social-item {
+  margin-right: 15px;
+}
+
+.footer__about-site {
+  min-width: 240px;
+  //margin-right: 4.6%;
+  margin-right: auto;
+
+  &--menu {
+    @include list-reset;
+  }
+
+  &--title {
+    @include mp-reset;
+    margin-bottom: 24px;
+    font-family: $font-family-Roboto;
+    font-size: 15px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: #1b2d37;
+  }
+
+  &--item {
+    font-family: $font-family-PT-Mono;
+    font-size: 15px;
+    line-height: 25px;
+    color: #1b2d37;
+    opacity: 0.5;
+  }
+}
+
+.footer__about-detail {
+  @include list-reset;
+  min-width: 150px;
+  padding-left: 20px;
+  margin-top: 40px;
+
+  &--item {
+    font-family: $font-family-PT-Mono;
+    font-size: 15px;
+    line-height: 26px;
+    color: #1b2d37;
+    opacity: 0.5;
+  }
+}
+
+.footer__our-address {
+  min-width: 336px;
+  margin-right: 0;
+  margin-left: 14%;
+
+  &--title {
+    @include mp-reset;
+    margin-bottom: 24px;
+    font-family: $font-family-Roboto;
+    font-size: 15px;
+    line-height: 16px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: #1b2d37;
+  }
+
+  &--menu {
+    @include list-reset;
+  }
+
+  &--content {
+    font-family: $font-family-PT-Mono;
+    font-size: 15px;
+    line-height: 25px;
+
+    color: #1b2d37;
+    opacity: 0.5;
+  }
+}
+
+.footer__more-info {
+  @include list-reset;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -9px;
+
+  &--content {
+    font-family: $font-family-PT-Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: #1b2d37;
+
+    opacity: 0.5;
+  }
+}
+

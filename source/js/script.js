@@ -1,15 +1,42 @@
 'use strict';
-var pageHeader = document.querySelector('.page-header');
-var headerToggle = document.querySelector('.page-header__toggle');
+var KeyCode = {
+  ESC: 27,
+  ENTER: 13,
+  SPACE: 32
+};
+var modal = document.querySelector('.modal');
+var openForm = document.querySelector('.page-header__open-form');
+var closeForm = document.querySelector('.modal--close-form');
 
-pageHeader.classList.remove('page-header--nojs');
+modal.classList.remove('modal--nojs');
+modal.classList.remove('modal--opened');
+modal.classList.add('modal--closed');
 
-headerToggle.addEventListener('click', function () {
-  if (pageHeader.classList.contains('page-header--closed')) {
-    pageHeader.classList.remove('page-header--closed');
-    pageHeader.classList.add('page-header--opened');
+openForm .addEventListener('click', function () {
+  if (modal.classList.contains('modal--closed')) {
+    modal.classList.remove('modal--closed');
+    modal.classList.add('modal--opened');
   } else {
-    pageHeader.classList.add('page-header--closed');
-    pageHeader.classList.remove('page-header--opened');
+    modal.classList.add('modal--closed');
+    modal.classList.remove('modal--opened');
   }
 });
+
+closeForm.addEventListener('click', function () {
+  modal.classList.remove('modal--opened');
+  modal.classList.add('modal--closed');
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.keyCode === KeyCode.ESC) {
+    modal.classList.remove('modal--opened');
+    modal.classList.add('modal--closed');
+  }
+});
+
+
+// var isEscEvent = function (evt, action) {
+//   if (evt.keyCode === KeyCode.ESC) {
+//     action();
+//   }
+// };

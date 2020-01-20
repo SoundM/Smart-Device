@@ -54,8 +54,8 @@
   padding: 0 12px;
   padding-top: 63px;
   min-height: 190px;
-  //background-color: $bg-white;
-  background: transparent;
+  background-color: $bg-white;
+  //background: transparent;
   display: flex;
   justify-content: space-between;
 }
@@ -67,4 +67,5 @@
   padding: 0 12px;
   min-height: 29px;
   padding-top: 13px;
+  background-color: $bg-white;
 }

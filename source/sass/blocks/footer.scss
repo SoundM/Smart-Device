@@ -1,9 +1,12 @@
+.footer {
+  background-color: $bg-white;
+}
+
 .footer-links {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   min-width: 240px;
-  margin-right: 13%;
 }
 
 .footer__link-logo {
@@ -49,9 +52,14 @@
 }
 
 .footer__about-site {
-  min-width: 240px;
-  //margin-right: 4.6%;
-  margin-right: auto;
+  min-width: 33.6%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: start;
+
+  & div {
+    width: 240px;
+  }
 
   &--menu {
     @include list-reset;
@@ -82,9 +90,9 @@
 
 .footer__about-detail {
   @include list-reset;
-  min-width: 150px;
-  padding-left: 20px;
+  width: 166px;
   margin-top: 40px;
+  margin-left: 14.5%;
 
   &--item {
     font-family: $font-family-PT-Mono;
@@ -96,9 +104,8 @@
 }
 
 .footer__our-address {
-  min-width: 336px;
+  width: 23.8%;
   margin-right: 0;
-  margin-left: 14%;
 
   &--title {
     @include mp-reset;
@@ -131,24 +138,44 @@
 
 .footer__more-info {
   @include list-reset;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: -9px;
-
-  &--content {
-    font-family: $font-family-PT-Mono;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-
-    color: #1b2d37;
-
-    opacity: 0.5;
-  }
 }
 
+.footer__more-info-content {
+  font-family: $font-family-PT-Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #1b2d37;
+
+  opacity: 0.5;
+
+  &--low {
+    width: 165px;
+    margin-right: 4%;
+  }
+
+  &--service {
+    width: 235px;
+    margin-right: 10%;
+  }
+
+  &--private {
+    width: 220px;
+    margin-right: auto;
+  }
+
+  &--developer {
+    width: 192px;
+    margin-right: 0;
+  }
+}

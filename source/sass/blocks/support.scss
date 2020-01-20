@@ -127,6 +127,8 @@
 
   & textarea {
     @include mp-reset;
+    box-sizing: border-box;
+    padding: 0 15px;
     display: inline-block;
     vertical-align: middle;
     width: 100%;

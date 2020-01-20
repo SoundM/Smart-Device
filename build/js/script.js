@@ -34,9 +34,21 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
+var yak1 = document.querySelector('a[href="#yak1"]');
+var yak2 = document.querySelector('a[href="#yak2"]');
+var place1 = document.getElementById('#yak1');
+var place2 = document.getElementById('#yak2');
 
-// var isEscEvent = function (evt, action) {
-//   if (evt.keyCode === KeyCode.ESC) {
-//     action();
-//   }
-// };
+yak1.addEventListener('click', function () {
+  place1.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+});
+
+yak2.addEventListener('click', function () {
+  place2.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+});

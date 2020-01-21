@@ -9,7 +9,7 @@
   &__title {
     font-family: $font-family-Roboto-Condensed-bold;
     font-size: 80px;
-    line-height: 19px;
+    line-height: 18px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
 
@@ -72,5 +72,112 @@
 
     opacity: 0.5;
     transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .header-content {
+    @include mp-reset;
+    width: 470px;
+    margin-left: 8.8%;
+
+    &__title {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      margin-top: 85px;
+      margin-bottom: 29px;
+      font-size: 60px;
+      line-height: 70px;
+      letter-spacing: 0.07em;
+    }
+
+    &__subtitle {
+      margin-left: 51px;
+      font-size: 18px;
+      line-height: 156.8%;
+
+      &::before {
+        width: 12px;
+        margin-left: -47px;
+        margin-right: 14px;
+      }
+    }
+  }
+
+  .header-content__link1 {
+    @include mp-reset;
+    margin-top: 54px;
+    padding-top: 18px;
+    width: 379px;
+    margin-left: 50px;
+  }
+
+  .header-content__link2 {
+    @include mp-reset;
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header-content {
+    @include mp-reset;
+    width: 90%;
+
+    &__title {
+      margin: 184px 0 28px;
+      font-size: 40px;
+      line-height: 47px;
+      letter-spacing: 0.07em;
+    }
+
+    &__subtitle {
+      margin-left: 51px;
+      font-size: 16px;
+      line-height: 156.8%;
+
+      &::before {
+        width: 13px;
+        margin-left: -49px;
+        margin-right: 15px;
+        vertical-align: baseline;
+      }
+    }
+
+    .header-content__link1 {
+      @include mp-reset;
+      margin: 0 auto;
+      position: relative;
+      width: 287px;
+      margin-top: 40px;
+
+      &::after {
+        content: "Бесплатная консультация";
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        width: 287px;
+        height: 55px;
+        padding-top: 16px;
+        font-family: $font-family-Roboto-Condensed-bold;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+
+        color: $font-white;
+
+        //border: 1px solid #ffffff;
+        box-sizing: border-box;
+        border-radius: 5px;
+        background-color: $bg-blue;
+      }
+    }
   }
 }

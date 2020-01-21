@@ -3,11 +3,49 @@
   margin: 0 auto;
   padding: 0 12px;
   min-height: 878px;
-  background-image: url("../../img/device.png"), url("../../img/header.png");
+  background-image: url("../../img/device@1x.png"), url("../../img/header@1x.jpg");
   //background-image: url("../../img/device.png");
   background-repeat: no-repeat, no-repeat;
   background-position: calc(450px + 48.3%) 260px, 50% 0;
   background-size: 705px 515px, 1920px 881px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/device@2x.png"), url("../../img/header@2x.jpg");
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .wrapper-header {
+    min-height: 686px;
+    padding: 0 25px;
+    background-image: url("../../img/device-tablet@1x.png"), url("../../img/header-tablet@1x.jpg");
+    //background-image: url("../../img/device-tablet@1x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 100% 112px, 50% 0;
+    background-size: 260px 340px, 100% 686px;
+    background-color: transparent;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/device-tablet@2x.png"), url("../../img/header-tablet@2x.jpg");
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .wrapper-header {
+    min-height: 647px;
+    padding: 0 16px;
+    background-image: url("../../img/device-mobile@1x.png"), url("../../img/header-mobile@1x.jpg");
+    //background-image: url("../../img/device-mobile@1x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 100% 93px, 50% 0;
+    background-size: 301px 220px, 100% 647px;
+    background-color: transparent;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/device-mobile@2x.png"), url("../../img/header-mobile@2x.jpg");
+    }
+  }
 }
 
 .wrapper-advantages {
@@ -15,12 +53,45 @@
   margin: 0 auto;
   box-sizing: border-box;
   min-height: 1263px;
-  background-image: url("../../img/advantages.svg");
+  background-image: url("../../img/advantages@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% -30px;
   background-size: 1920px 1347px;
   background-color: $bg-white;
-  //background-color: transparent;
+
+  //@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  //  background-image: url("../../img/advantages@2x.jpg");
+  //}
+}
+
+@media (max-width: $tablet-width) {
+  .wrapper-advantages {
+    min-height: 1118px;
+    background-image: url("../../img/advantages-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -30px;
+    background-size: $mobile-width 1118px;
+    background-color: $bg-white;
+
+    //@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //  background-image: url("../../img/advantages@2x.jpg");
+    //}
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .wrapper-advantages {
+    min-height: 1790px;
+    background-image: url("../../img/advantages-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -30px;
+    background-size: $mobile-width 1790px;
+    background-color: $bg-white;
+
+    //@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //  background-image: url("../../img/photo1-mobile@2x.jpg");
+    //}
+  }
 }
 
 .wrapper-about-service {
@@ -34,17 +105,50 @@
   //background: transparent;
 }
 
+@media (max-width: $tablet-width) {
+  .wrapper-about-service {
+    min-height: 1127px;
+    /* Стили, влияющие на экраны ДО 1023px (Планшет) */
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .wrapper-about-service {
+    min-height: 1109px;
+    /* Стили, влияющие на экраны ДО 767px (Мобильные) */
+  }
+}
+
 .wrapper-support {
   @include mp-reset;
   margin: 0 auto;
   padding: 0 12px;
   min-height: 668px;
-  background-image: url("../../img/paper_airplane.png"), url("../../img/form.png");
-  //background-image: url("../../img/paper_airplane.png");
+  background-image: url("../../img/paper_airplane@1x.png"), url("../../img/support@1x.jpg");
+  //background-image: url("../../img/paper_airplane@1x.png");
   background-repeat: no-repeat, no-repeat;
-  background-position: calc(50% - 354px) 155px, 50% -30px;
-  background-size: 511px 288px, 1920px 670px;
-  background-color: $bg-blue;
+  background-position: calc(50% - 354px) 155px, 50% -60px;
+  background-size: 511px 288px, 1920px 760px;
+
+  //@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  //  background-image: url("../../img/paper_airplane@1x.png"), url("../../img/support@2x.jpg");
+  //}
+}
+
+@media (max-width: $tablet-width) {
+  .wrapper-support {
+    /* Стили, влияющие на экраны ДО 1023px (Планшет) */
+    min-height: 665px;
+    background-color: $bg-blue;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .wrapper-support {
+    /* Стили, влияющие на экраны ДО 767px (Мобильные) */
+    min-height: 640px;
+    background-color: $bg-blue;
+  }
 }
 
 .wrapper-footer {
@@ -60,6 +164,21 @@
   justify-content: space-between;
 }
 
+@media (max-width: $tablet-width) {
+  .wrapper-footer {
+    /* Стили, влияющие на экраны ДО 1023px (Планшет) */
+    min-height: 385px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .wrapper-footer {
+    /* Стили, влияющие на экраны ДО 767px (Мобильные) */
+    min-height: 553px;
+  }
+}
+
+
 .wrapper-footer-footer {
   @include mp-reset;
   margin: 0 auto;
@@ -68,4 +187,18 @@
   min-height: 29px;
   padding-top: 13px;
   background-color: $bg-white;
+}
+
+@media (max-width: $tablet-width) {
+  .wrapper-footer-footer {
+    /* Стили, влияющие на экраны ДО 1023px (Планшет) */
+    min-height: 68px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .wrapper-footer-footer {
+    /* Стили, влияющие на экраны ДО 767px (Мобильные) */
+    min-height: 128px;
+  }
 }

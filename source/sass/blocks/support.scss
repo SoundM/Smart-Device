@@ -1,3 +1,7 @@
+.support {
+  background-color: $bg-blue;
+}
+
 .support__wrapper {
   @include mp-reset;
   max-width: 1170px;
@@ -132,6 +136,7 @@
     display: inline-block;
     vertical-align: middle;
     width: 100%;
+    height: 110px;
     background-color: $bg-white-opacity;
     outline: none;
     border: none;

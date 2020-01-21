@@ -1,7 +1,22 @@
-@media (min-width: $desktop-width-min) {
+@media (min-width: 1024px) {
   body {
     //width: 100%;
-    background: $bg url("../../img/smart-device-modal.png") no-repeat 50% 0;
+    background: $bg url("../../img/smartDevice.png") no-repeat 50% 0;
     background-size: 1920px auto;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  body {
+    background: $bg url("../../img/Smart Device 750.png") no-repeat 50% 0;
+    background-size: 768px auto;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  body {
+    /* Стили, влияющие на экраны ДО 767px (Мобильные) */
+    background: $bg url("../../img/Smart Device 320.png") no-repeat 50% 0;
+    background-size: 320px auto;
   }
 }

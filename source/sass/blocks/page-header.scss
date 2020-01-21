@@ -1,6 +1,5 @@
 .page-header {
   @include mp-reset;
-  min-height: 878px;
   margin: 0 auto;
   width: 100%;
   max-width: 1415px;
@@ -14,7 +13,6 @@
   }
 
   &__content {
-    min-height: 725px;
     padding-right: 9.2%;
     padding-top: 35px;
   }
@@ -24,4 +22,24 @@
   @include list-reset;
   display: flex;
   justify-content: flex-start;
+}
+
+@media (max-width: $tablet-width) {
+  .page-header__nav {
+    padding-top: 19px;
+  }
+
+  .page-header__content {
+    @include mp-reset;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-header__nav {
+    padding-top: 17px;
+  }
+
+  .page-header__content {
+    @include mp-reset;
+  }
 }

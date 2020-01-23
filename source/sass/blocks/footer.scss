@@ -1,5 +1,6 @@
 .footer {
-  //background-color: $bg-white;
+  background-color: $bg-white;
+  position: relative;
 }
 
 .footer-links {
@@ -36,6 +37,7 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
+    letter-spacing: 0.075em;
     color: #788891;
   }
 }
@@ -51,18 +53,29 @@
   margin-right: 15px;
 }
 
-.footer__about-site {
-  min-width: 33.6%;
-  margin: 0 auto;
+.footer__accordion {
+  @include mp-reset;
+  box-sizing: border-box;
+  width: 100%;
   display: flex;
-  justify-content: start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer__about-site {
+  min-width: 40.6%;
+  margin: 0 auto;
+  margin-left: 15.5%;
+  display: flex;
+  justify-content: space-between;
 
   & div {
-    width: 240px;
+    width: 260px;
   }
 
   &--menu {
     @include list-reset;
+    min-width: 245px;
   }
 
   &--title {
@@ -90,9 +103,8 @@
 
 .footer__about-detail {
   @include list-reset;
-  width: 166px;
+  width: 169px;
   margin-top: 40px;
-  margin-left: 14.5%;
 
   &--item {
     font-family: $font-family-PT-Mono;
@@ -104,7 +116,7 @@
 }
 
 .footer__our-address {
-  width: 23.8%;
+  width: 28.6%;
   margin-right: 0;
 
   &--title {
@@ -177,5 +189,203 @@
   &--developer {
     width: 192px;
     margin-right: 0;
+  }
+}
+
+.footer__accordion--toggle-on,
+.footer__accordion--toggle-off {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .footer-links {
+    @include mp-reset;
+    box-sizing: border-box;
+    min-width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .footer__link-logo {
+    align-self: start;
+    //box-sizing: border-box;
+    margin-bottom: 0;
+
+    &--name {
+      line-height: 28px;
+    }
+  }
+
+  .footer__social-menu {
+    align-self: start;
+  }
+
+  .footer__social-item {
+    margin: 0;
+    margin-top: 12px;
+    margin-left: 15px;
+  }
+
+  .footer__about-site {
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 0;
+    margin-right: auto;
+    padding-top: 37px;
+  }
+
+  .footer__about-detail {
+    margin: 0;
+  }
+
+  .footer__our-address {
+    width: 48%;
+    padding-top: 37px;
+  }
+
+  .footer__more-info-content--low {
+    display: none;
+  }
+
+  .footer__more-info-content--service {
+    position: absolute;
+    top: 32px;
+    left: 42.5%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .footer-links {
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    min-height: 193px;
+    margin-top: 45px;
+
+    border-bottom: 1px solid #626962;
+  }
+
+  .footer__link-logo {
+    margin: 0 auto;
+  }
+
+  .footer__social-menu {
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 35.5%;
+    margin-top: 81px;
+  }
+
+  .footer__social-item {
+    margin: 0;
+  }
+
+  .footer__accordion {
+    width: 100%;
+    min-height: 100px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .footer__about-site,
+  .footer__our-address {
+    @include mp-reset;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    & div {
+      width: 100%;
+    }
+  }
+
+  .footer__about-site {
+    position: relative;
+    border-bottom: 1px solid #626962;
+  }
+
+  .footer__our-address {
+    position: relative;
+    border-top: 1px solid #626962;
+    margin-top: -1px;
+  }
+
+  .footer__about-site--title {
+    @include text;
+    display: block;
+    min-width: 261px;
+    margin-top: 28px;
+    margin-bottom: 27px;
+  }
+
+  .footer__our-address--title {
+    @include text;
+    display: block;
+    min-width: 261px;
+    margin-top: 28px;
+    margin-bottom: 30px;
+  }
+
+  .footer__our-address--content {
+    //@include text;
+    width: 95%;
+  }
+
+  //.footer__about-site--menu,
+  //.footer__about-detail {
+  //  display: none;
+  //}
+
+  .footer__our-address--menu {
+    margin-top: 2px;
+  }
+
+  .footer__more-info {
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 16px;
+  }
+
+  .footer__more-info-content {
+    @include text;
+    margin: 0 auto;
+    line-height: 44px;
+  }
+
+  .footer__more-info-content--low {
+    display: none;
+  }
+
+  .footer__more-info-content--service {
+    top: 113px;
+    left: 14%;
+  }
+
+  .footer__accordion--toggle-off {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 28px;
+    right: 19px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  .footer__accordion--toggle-on {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    position: absolute;
+    top: 28px;
+    right: 19px;
+    outline: none;
+    border: none;
+    background-color: transparent;
   }
 }

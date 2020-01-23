@@ -58,7 +58,11 @@
 .advantages__item:hover,
 .advantages__item:hover svg,
 .advantages__item:hover h3,
-.advantages__item:hover p {
+.advantages__item:hover p,
+.advantages__item:focus,
+.advantages__item:focus svg,
+.advantages__item:focus h3,
+.advantages__item:focus p {
   fill: $bg-white;
   background-color: $bg-blue;
   color: $font-white;
@@ -132,6 +136,24 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: $font-blue;
+
+    &:hover {
+      background-color: $bg-blue;
+      opacity: 0.8;
+      color: $font-white;
+    }
+
+    &:focus {
+      background-color: $bg-blue;
+      opacity: 0.8;
+      color: $font-white;
+    }
+
+    &:active {
+      background-color: $bg-blue;
+      opacity: 0.5;
+      color: $font-white;
+    }
   }
 }
 

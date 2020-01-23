@@ -58,6 +58,21 @@
     box-sizing: border-box;
     border-radius: 5px;
     background-color: $bg-blue;
+
+    &:hover {
+      background-color: $bg-blue;
+      opacity: 0.8;
+    }
+
+    &:focus {
+      background-color: $bg-blue;
+      opacity: 0.8;
+    }
+
+    &:active {
+      background-color: $bg-blue;
+      opacity: 0.5;
+    }
   }
 
   &__link2 {
@@ -72,6 +87,21 @@
 
     opacity: 0.5;
     transform: rotate(-90deg);
+
+    &:hover {
+      background-color: $bg-blue;
+      opacity: 1;
+    }
+
+    &:focus {
+      background-color: $bg-blue;
+      opacity: 1;
+    }
+
+    &:active {
+      background-color: $bg-blue;
+      opacity: 0.1;
+    }
   }
 }
 
@@ -118,6 +148,16 @@
     width: 0;
     height: 0;
     display: none;
+
+    &:hover {
+      background-color: $bg-blue;
+      opacity: 0.1;
+    }
+
+    &:active {
+      background-color: $bg-blue;
+      opacity: 0.5;
+    }
   }
 }
 

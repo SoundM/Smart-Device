@@ -1,0 +1,60 @@
+.accordion__button1,
+.accordion__button2 {
+  display: none;
+}
+
+.accordion__close1,
+.accordion__close2 {
+  display: block;
+}
+
+@media (max-width: $mobile-width) {
+  .accordion__show1,
+  .accordion__show2 {
+    display: block;
+  }
+
+  .accordion__close1,
+  .accordion__close2 {
+    display: none;
+  }
+
+  .accordion__button-opened1,
+  .accordion__button-opened2 {
+    background-image: url("../../img/plus-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    display: block;
+    margin-top: 28px;
+    margin-left: 4px;
+    width: 20px;
+    height: 20px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  .accordion__button-closed1,
+  .accordion__button-closed2 {
+    background-image: url("../../img/minus-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 16px 2px;
+    display: block;
+    margin-top: 22px;
+    margin-left: 4px;
+    width: 20px;
+    height: 20px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  .accordion__button-closed1 {
+    margin-top: 37px;
+  }
+
+  .accordion__nojs1,
+  .accordion__nojs2 {
+    display: none;
+  }
+}

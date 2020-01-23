@@ -35,6 +35,16 @@
       padding-top: 4px;
       margin-right: 2px;
     }
+
+    &:hover {
+      background-color: $bg-blue;
+      opacity: 0.1;
+    }
+
+    &:active {
+      background-color: $bg-blue;
+      opacity: 0.5;
+    }
   }
 }
 

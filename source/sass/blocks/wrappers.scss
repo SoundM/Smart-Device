@@ -171,7 +171,7 @@
   padding: 0 12px;
   padding-top: 68px;
   min-height: 190px;
-  background-color: $bg-white;
+  //background-color: $bg-white;
   display: flex;
   justify-content: space-between;
 }
@@ -181,16 +181,18 @@
     /* Стили, влияющие на экраны ДО 1023px (Планшет) */
     box-sizing: border-box;
     min-height: 374px;
-    padding: 15px 25px 0;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
   }
 }
 
 @media (max-width: $mobile-width) {
   .wrapper-footer {
     /* Стили, влияющие на экраны ДО 767px (Мобильные) */
-    min-height: 553px;
+    min-height: 372px;
     padding: 0;
   }
 }

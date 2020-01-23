@@ -135,22 +135,24 @@
   @include mp-reset;
   margin: 0 auto;
   padding: 0 12px;
-  min-height: 668px;
+  min-height: 670px;
   background-image: url("../../img/paper_airplane@1x.png"), url("../../img/support@1x.jpg");
   //background-image: url("../../img/paper_airplane@1x.png");
   background-repeat: no-repeat, no-repeat;
   background-position: calc(50% - 354px) 155px, 50% -60px;
   background-size: 511px 288px, 1920px 760px;
+  background-color: transparent;
 
-  //@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  //  background-image: url("../../img/paper_airplane@1x.png"), url("../../img/support@2x.jpg");
-  //}
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/paper_airplane@1x.png"), url("../../img/support@2x.jpg");
+  }
 }
 
 @media (max-width: $tablet-width) {
   .wrapper-support {
     /* Стили, влияющие на экраны ДО 1023px (Планшет) */
-    min-height: 665px;
+    background-image: none;
+    min-height: 664px;
     background-color: $bg-blue;
   }
 }
@@ -159,7 +161,7 @@
   .wrapper-support {
     /* Стили, влияющие на экраны ДО 767px (Мобильные) */
     min-height: 640px;
-    background-color: $bg-blue;
+    //background-color: $bg-blue;
   }
 }
 

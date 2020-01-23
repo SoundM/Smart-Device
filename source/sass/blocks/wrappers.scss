@@ -18,15 +18,18 @@
   .wrapper-header {
     min-height: 686px;
     padding: 0 25px;
-    background-image: url("../../img/device-tablet@1x.png"), url("../../img/header-tablet@1x.jpg");
+    background-image: url("../../img/component-table@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    //background-image: url("../../img/device-tablet@1x.png"), url("../../img/header-tablet@1x.jpg");
     //background-image: url("../../img/device-tablet@1x.png");
-    background-repeat: no-repeat, no-repeat;
-    background-position: 100% 112px, 50% 0;
-    background-size: 260px 340px, 100% 686px;
-    background-color: transparent;
+    //background-repeat: no-repeat, no-repeat;
+    //background-position: 100% 112px, 50% 0;
+    //background-size: 260px 340px, 100% 686px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/device-tablet@2x.png"), url("../../img/header-tablet@2x.jpg");
+      background-image: url("../../img/component-table@2x.jpg");
     }
   }
 }
@@ -35,15 +38,21 @@
   .wrapper-header {
     min-height: 647px;
     padding: 0 16px;
-    background-image: url("../../img/device-mobile@1x.png"), url("../../img/header-mobile@1x.jpg");
-    //background-image: url("../../img/device-mobile@1x.png");
-    background-repeat: no-repeat, no-repeat;
-    background-position: 100% 93px, 50% 0;
-    background-size: 301px 220px, 100% 647px;
-    background-color: transparent;
+    background-image: url("../../img/component-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 18%;
+    background-size: cover;
+    //background-image: url("../../img/device-mobile@1x.png"), url("../../img/header-mobile@1x.jpg");
+    ////background-image: url("../../img/device-mobile@1x.png");
+    //background-repeat: no-repeat, no-repeat;
+    //background-position: 100% 93px, 50% 0;
+    //background-size: 301px 220px, cover;
 
+    //@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //  background-image: url("../../img/device-mobile@2x.png"), url("../../img/header-mobile@2x.jpg");
+    //}
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/device-mobile@2x.png"), url("../../img/header-mobile@2x.jpg");
+      background-image: url("../../img/component-mobile@2x.jpg");
     }
   }
 }
@@ -57,50 +66,52 @@
   background-repeat: no-repeat;
   background-position: 50% -30px;
   background-size: 1920px 1347px;
-  background-color: $bg-white;
 
-  //@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  //  background-image: url("../../img/advantages@2x.jpg");
-  //}
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/advantages@2x.jpg");
+  }
 }
 
 @media (max-width: $tablet-width) {
   .wrapper-advantages {
-    min-height: 1118px;
+    min-height: 1108px;
     background-image: url("../../img/advantages-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-position: 50% -30px;
-    background-size: $mobile-width 1118px;
+    background-position: 100% 100px;
+    background-size: 559px 853px;
     background-color: $bg-white;
+    //background-color: transparent;
 
-    //@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    //  background-image: url("../../img/advantages@2x.jpg");
-    //}
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/advantages-tablet@2x.jpg");
+    }
   }
 }
 
 @media (max-width: $mobile-width) {
   .wrapper-advantages {
-    min-height: 1790px;
+    min-height: 1797px;
     background-image: url("../../img/advantages-mobile@1x.jpg");
     background-repeat: no-repeat;
-    background-position: 50% -30px;
-    background-size: $mobile-width 1790px;
+    background-position: 100% 650px;
+    background-size: 320px 873px;
     background-color: $bg-white;
+    //background-color: transparent;
 
-    //@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    //  background-image: url("../../img/photo1-mobile@2x.jpg");
-    //}
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/advantages-mobile@2x.jpg");
+    }
   }
 }
 
 .wrapper-about-service {
   @include mp-reset;
+  box-sizing: border-box;
   margin: 0 auto;
-  max-width: 1174px;
+  max-width: 1198px;
   padding: 0 12px;
   padding-top: 59px;
-  min-height: 883px;
+  min-height: 938px;
   background-color: $bg-black;
   //background: transparent;
 }
@@ -108,13 +119,14 @@
 @media (max-width: $tablet-width) {
   .wrapper-about-service {
     min-height: 1127px;
-    /* Стили, влияющие на экраны ДО 1023px (Планшет) */
+    padding: 0 24px;
   }
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $mobile-width) {
   .wrapper-about-service {
-    min-height: 1109px;
+    min-height: 1101px;
+    padding: 0 15px;
     /* Стили, влияющие на экраны ДО 767px (Мобильные) */
   }
 }

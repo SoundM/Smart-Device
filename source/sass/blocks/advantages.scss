@@ -7,7 +7,7 @@
 
 .advantages__menu {
   @include list-reset;
-  padding-top: 82px;
+  padding-top: 112px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -15,16 +15,25 @@
 
 .advantages__item {
   @include mp-reset;
-  width: 41.6%;
+  width: 48.6%;
   max-width: 570px;
-  min-height: 257px;
-  margin-top: 30px;
+  min-height: 299px;
+  box-sizing: border-box;
   border: 1px solid #ebebeb;
   border-left: 2px solid #00b2ff;
   padding: 40px 40px 0 41px;
+  padding-top: 98px;
+  padding-right: 35px;
+  padding-bottom: 22px;
+  padding-left: 42px;
+  margin-bottom: 30px;
   background-color: $bg-white;
 
+  position: relative;
+
   &--title {
+    @include text;
+    margin-bottom: 25px;
     font-family: $font-family-Roboto;
     font-size: 24px;
     line-height: 22px;
@@ -32,10 +41,17 @@
   }
 
   &--content {
+    @include text;
     font-family: $font-family-PT-Mono;
     font-size: 16px;
     line-height: 22px;
     color: $font-black;
+  }
+
+  & svg {
+    position: absolute;
+    top: 39px;
+    left: 41px;
   }
 }
 
@@ -51,23 +67,32 @@
 .advantages__about-us {
   display: flex;
   justify-content: space-between;
-  padding-top: 105px;
+  padding-top: 80px;
 }
 
 .advantages__about-us--logo {
-  width: 593px;
-  height: 330px;
-  background-image: url("../../img/mask-group.png");
+  box-sizing: border-box;
+  min-width: 220px;
+  min-height: 317px;
+  margin-left: -30px;
+  margin-right: -10px;
+  background-image: url("../../img/2005@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-color: $bg-white;
+  background-size: cover;
+  background-color: transparent;
+  //background-color: $bg-white;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/2005@2x.jpg");
+  }
 }
 
 .advantages__about-us-content {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: start;
-  padding: 0 10px 0 0;
+  padding-right: 20px;
 
   &--title {
     display: inline-block;
@@ -76,7 +101,7 @@
     margin-bottom: 12px;
     font-family: $font-family-Roboto;
     font-size: 36px;
-    line-height: 51px;
+    line-height: 45px;
     color: $font-black;
   }
 
@@ -107,5 +132,185 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: $font-blue;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .advantages__content {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 25px;
+  }
+
+  .advantages__menu {
+    padding-top: 52px;
+  }
+
+  .advantages__item {
+    @include mp-reset;
+    width: 47.65%;
+    min-height: 232px;
+    box-sizing: border-box;
+    padding-left: 25px;
+    padding-top: 70px;
+    padding-right: 18px;
+    padding-bottom: 22px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &--title {
+      @include text;
+      margin-bottom: 17px;
+    }
+
+    &--content {
+      @include text;
+    }
+
+    & svg {
+      top: 22px;
+      left: 25px;
+    }
+  }
+
+  .advantages__item--large-suppliers svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .advantages__item--private svg {
+    width: 30px;
+    height: 26px;
+  }
+
+  .advantages__item--personalization svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .advantages__about-us {
+    padding-top: 24px;
+  }
+
+  .advantages__about-us--logo {
+    min-width: 244px;
+    min-height: 362px;
+    margin-right: -34px;
+    margin-left: -25px;
+    background-image: url("../../img/2005-tablet@1x.png");
+    background-repeat: no-repeat;
+    //background-size: cover;
+    background-position: 0 0;
+    background-size: 244px 362px;
+    background-color: transparent;
+    //background-color: $bg-white;
+
+    //@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //  background-image: url("../../img/2005@2x.jpg");
+    //}
+  }
+
+  .advantages__about-us-content {
+    padding-right: 0;
+
+    &--title {
+      @include text;
+      font-size: 32px;
+      line-height: 140.62%;
+      margin-bottom: 16px;
+    }
+
+    &--button {
+      margin-top: 127px;
+    }
+  }
+
+  .advantages__about-us-content--tablet-content {
+    display: block;
+    margin: 0 auto;
+    height: 1px;
+    position: relative;
+    margin-top: 12px;
+    visibility: hidden;
+
+
+    &::after {
+      content: "Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог.. ";
+      position: absolute;
+      visibility: visible;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .advantages__content {
+    padding: 0 15px;
+  }
+
+  .advantages__menu {
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 36px;
+  }
+
+  .advantages__item {
+    width: 100%;
+    padding-bottom: 25px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    &--title {
+      @include text;
+      margin-bottom: 12px;
+      font-size: 20px;
+      line-height: 140.62%;
+    }
+  }
+
+  .advantages__item--large-suppliers {
+    padding-right: 12px;
+  }
+
+  .advantages__item--private {
+    padding-top: 67px;
+
+    & h3 {
+      margin-bottom: -10px;
+    }
+
+    & svg {
+      top: 27px;
+      left: 24px;
+    }
+  }
+
+  .advantages__about-us {
+    padding-top: 37px;
+  }
+
+  .advantages__about-us--logo {
+    display: none;
+  }
+
+  .advantages__about-us-content {
+    padding: 0 1px;
+
+    &--title {
+      font-size: 28px;
+      line-height: 140.62%;
+      margin-bottom: 11px;
+    }
+
+    &--button {
+      margin-top: 224px;
+    }
+  }
+
+  .advantages__about-us-content--tablet-content {
+    &::after {
+      top: 20px;
+    }
   }
 }

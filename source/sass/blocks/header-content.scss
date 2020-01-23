@@ -78,7 +78,7 @@
 @media (max-width: $tablet-width) {
   .header-content {
     @include mp-reset;
-    width: 470px;
+    width: 61%;
     margin-left: 8.8%;
 
     &__title {
@@ -124,10 +124,12 @@
 @media (max-width: $mobile-width) {
   .header-content {
     @include mp-reset;
-    width: 90%;
+    width: 95%;
 
     &__title {
-      margin: 184px 0 28px;
+      //margin: 184px 0 28px;
+      margin-top: 67.3%;
+      margin-bottom: 28px;
       font-size: 40px;
       line-height: 47px;
       letter-spacing: 0.07em;
@@ -152,6 +154,8 @@
       position: relative;
       width: 287px;
       margin-top: 40px;
+      margin-bottom: 40px;
+      margin-left: 0;
 
       &::after {
         content: "Бесплатная консультация";

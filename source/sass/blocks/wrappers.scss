@@ -3,14 +3,14 @@
   margin: 0 auto;
   padding: 0 12px;
   min-height: 878px;
-  background-image: url("../../img/device@1x.png"), url("../../img/header@1x.jpg");
+  background-image: url("../img/device@1x.png"), url("../img/header@1x.jpg");
   //background-image: url("../../img/device.png");
   background-repeat: no-repeat, no-repeat;
   background-position: calc(450px + 48.3%) 260px, 50% 0;
   background-size: 705px 515px, 1920px 881px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/device@2x.png"), url("../../img/header@2x.jpg");
+    background-image: url("../img/device@2x.png"), url("../img/header@2x.jpg");
   }
 }
 
@@ -18,7 +18,7 @@
   .wrapper-header {
     min-height: 686px;
     padding: 0 25px;
-    background-image: url("../../img/component-table@1x.jpg");
+    background-image: url("../img/component-table@1x.jpg");
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
@@ -29,7 +29,7 @@
     //background-size: 260px 340px, 100% 686px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/component-table@2x.jpg");
+      background-image: url("../img/component-table@2x.jpg");
     }
   }
 }
@@ -38,7 +38,7 @@
   .wrapper-header {
     min-height: 647px;
     padding: 0 16px;
-    background-image: url("../../img/component-mobile@1x.jpg");
+    background-image: url("../img/component-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: 50% 18%;
     background-size: cover;
@@ -52,7 +52,7 @@
     //  background-image: url("../../img/device-mobile@2x.png"), url("../../img/header-mobile@2x.jpg");
     //}
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/component-mobile@2x.jpg");
+      background-image: url("../img/component-mobile@2x.jpg");
     }
   }
 }
@@ -62,20 +62,20 @@
   margin: 0 auto;
   box-sizing: border-box;
   min-height: 1263px;
-  background-image: url("../../img/advantages@1x.jpg");
+  background-image: url("../img/advantages@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% -30px;
   background-size: 1920px 1347px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/advantages@2x.jpg");
+    background-image: url("../img/advantages@2x.jpg");
   }
 }
 
 @media (max-width: $tablet-width) {
   .wrapper-advantages {
     min-height: 1108px;
-    background-image: url("../../img/advantages-tablet@1x.jpg");
+    background-image: url("../img/advantages-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: 100% 100px;
     background-size: 559px 853px;
@@ -83,7 +83,7 @@
     //background-color: transparent;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/advantages-tablet@2x.jpg");
+      background-image: url("../img/advantages-tablet@2x.jpg");
     }
   }
 }
@@ -91,7 +91,7 @@
 @media (max-width: $mobile-width) {
   .wrapper-advantages {
     min-height: 1797px;
-    background-image: url("../../img/advantages-mobile@1x.jpg");
+    background-image: url("../img/advantages-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: 100% 650px;
     background-size: 320px 873px;
@@ -99,7 +99,7 @@
     //background-color: transparent;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/advantages-mobile@2x.jpg");
+      background-image: url("../img/advantages-mobile@2x.jpg");
     }
   }
 }
@@ -136,7 +136,7 @@
   margin: 0 auto;
   padding: 0 12px;
   min-height: 667px;
-  background-image: url("../../img/paper_airplane@1x.png"), url("../../img/support@1x.jpg");
+  background-image: url("../img/paper_airplane@1x.png"), url("../img/support@1x.jpg");
   //background-image: url("../../img/paper_airplane@1x.png");
   background-repeat: no-repeat, no-repeat;
   background-position: calc(50% - 354px) 155px, 50% -60px;
@@ -144,7 +144,7 @@
   background-color: $bg-blue;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/paper_airplane@1x.png"), url("../../img/support@2x.jpg");
+    background-image: url("../img/paper_airplane@1x.png"), url("../img/support@2x.jpg");
   }
 }
 

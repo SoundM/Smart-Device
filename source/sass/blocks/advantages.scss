@@ -80,14 +80,14 @@
   min-height: 317px;
   margin-left: -30px;
   margin-right: -10px;
-  background-image: url("../../img/2005@1x.jpg");
+  background-image: url("../img/2005@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
   //background-color: $bg-white;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/2005@2x.jpg");
+    background-image: url("../img/2005@2x.jpg");
   }
 }
 
@@ -219,7 +219,7 @@
     min-height: 362px;
     margin-right: -34px;
     margin-left: -25px;
-    background-image: url("../../img/2005-tablet@1x.png");
+    background-image: url("../img/2005-tablet@1x.png");
     background-repeat: no-repeat;
     //background-size: cover;
     background-position: 0 0;

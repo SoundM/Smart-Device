@@ -200,7 +200,7 @@
 
   &:hover {
     background-color: $bg-blue;
-    opacity:1;
+    opacity: 1;
     color: $bg-white;
   }
 
@@ -230,7 +230,7 @@
   position: absolute;
   left: 12px;
   top: 9px;
-  background-image: url("../../img/checked-off.svg");
+  background-image: url("../img/checked-off.svg");
   background-repeat: no-repeat;
   width: 16px;
   height: 16px;
@@ -242,7 +242,7 @@
   position: absolute;
   left: 12px;
   top: 9px;
-  background-image: url("../../img/checked-on.svg");
+  background-image: url("../img/checked-on.svg");
   background-repeat: no-repeat;
   width: 16px;
   height: 16px;

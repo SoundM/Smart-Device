@@ -99,4 +99,56 @@ button2.addEventListener('click', function () {
   }
 });
 
+// маска для формы
+window.addEventListener('DOMContentLoaded', function () {
+  function setCursorPosition(pos, elem) {
+    elem.focus();
+    if (elem.setSelectionRange) {
+      elem.setSelectionRange(pos, pos);
+    } else if (elem.createTextRange) {
+      var range = elem.createTextRange();
+      range.collapse(true);
+      range.moveEnd('character', pos);
+      range.moveStart('character', pos);
+      range.select();
+    }
+  }
+
+  function mask(event) {
+    var matrix = '+7 (___) ___ ____';
+    var i = 0;
+    var def = matrix.replace(/\D/g, '');
+    // eslint-disable-next-line no-invalid-this
+    var val = this.value.replace(/\D/g, '');
+    if (def.length >= val.length) {
+      val = def;
+    }
+    // eslint-disable-next-line no-invalid-this
+    this.value = matrix.replace(/./g, function (a) {
+      // eslint-disable-next-line no-nested-ternary
+      return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a;
+    });
+    if (event.type === 'blur') {
+      // eslint-disable-next-line no-invalid-this
+      if (this.value.length === 2) {
+        // eslint-disable-next-line no-invalid-this
+        this.value = '';
+      }
+    } else {
+      // eslint-disable-next-line no-invalid-this
+      setCursorPosition(this.value.length, this);
+    }
+  }
+
+  var inputTel = document.querySelector('#tel');
+  var inputPhone = document.querySelector('#phone');
+  inputTel.addEventListener('input', mask, false);
+  inputTel.addEventListener('focus', mask, false);
+  inputTel.addEventListener('blur', mask, false);
+
+  inputPhone.addEventListener('input', mask, false);
+
+  inputPhone.addEventListener('focus', mask, false);
+  inputPhone.addEventListener('blur', mask, false);
+});
 

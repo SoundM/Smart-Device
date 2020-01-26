@@ -176,7 +176,7 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 
   var input = document.querySelector('#tel');
-  var inputPhone = document.querySelector('#phone');
+  var inputPhone = document.querySelector('#modal-tel');
 
   input.addEventListener('input', mask, false);
   input.addEventListener('focus', mask, false);
@@ -188,6 +188,45 @@ window.addEventListener('DOMContentLoaded', function () {
   inputPhone.addEventListener('blur', mask, false);
   inputPhone.addEventListener('keydown', mask, false);
 });
+
+
+// localStorage для модального окна
+
+var form = document.querySelector('.modal form');
+var submit = form.querySelector('[type=submit]');
+var checkValidity = function () {};
+
+if (form.checkValidity) {
+  checkValidity = function () {
+    submit.disabled = !form.checkValidity();
+  };
+}
+
+if (window.localStorage) {
+  var elements = form.querySelectorAll('[name]');
+  var elLength = elements.length;
+  var i;
+
+  for (i = 0; i < elLength; i++) {
+    (function (element) {
+      var name = element.getAttribute('name');
+
+      element.value = localStorage.getItem(name) || '';
+
+      element.onkeyup = function () {
+        var value = element.value;
+        if (!value) {
+          value = '';
+        }
+
+        localStorage.setItem(name, value);
+        checkValidity();
+      };
+    })(elements[i]);
+  }
+}
+
+checkValidity();
 
 
 // маска для формы
@@ -242,4 +281,3 @@ window.addEventListener('DOMContentLoaded', function () {
 //   inputPhone.addEventListener('focus', mask, false);
 //   inputPhone.addEventListener('blur', mask, false);
 // });
-

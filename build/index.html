@@ -231,15 +231,15 @@
           <form action="https://echo.htmlacademy.ru" method="post">
             <div class="support__name">
               <label for="name">Имя</label>
-              <input type="text" name="name" id="name" placeholder="" required="">
+              <input type="text" name="name" id="name" value="" maxlength="50" placeholder="" required="">
             </div>
             <div class="support__phone-numbers">
               <label for="tel">Телефон</label>
-              <input type="tel" name="phone-number" id="tel" pattern="\+7\([0-9]{3}\) [0-9]{3} [0-9]{4}" minlength="16" maxlength="16" placeholder="+7(XXX) XXX XXXX" required="">
+              <input type="tel" name="tel" id="tel" pattern="\+7\([0-9]{3}\) [0-9]{3} [0-9]{4}" minlength="16" maxlength="16" placeholder="+7(XXX) XXX XXXX" required="">
         </div>
             <div class="support__more-info">
               <label for="more-info">Ваш вопрос</label>
-              <textarea name="more-info" id="more-info" rows="6" placeholder=""></textarea>
+              <textarea name="more-info" id="more-info" rows="6" cols="40" placeholder=""></textarea>
             </div>
 
             <button class="support__button" type="submit">Задать вопрос</button>
@@ -363,15 +363,15 @@
     <form action="https://echo.htmlacademy.ru" method="post">
       <div class="modal__name">
         <label for="modal-name">Имя</label>
-        <input type="text" name="name" id="modal-name" placeholder="" required="">
+        <input type="text" name="name" id="modal-name" value="" maxlength="50" autofocus="" placeholder="" required="">
       </div>
       <div class="modal__phone-numbers">
-        <label for="phone">Телефон</label>
-        <input type="tel" name="phone-number" id="phone" pattern="\+7\([0-9]{3}\) [0-9]{3} [0-9]{4}" minlength="16" maxlength="16" placeholder="+7(XXX) XXX XXXX" required="">
+        <label for="modal-tel">Телефон</label>
+        <input type="tel" name="modal-tel" id="modal-tel" value="" pattern="\+7\([0-9]{3}\) [0-9]{3} [0-9]{4}" minlength="16" maxlength="16" placeholder="+7(XXX) XXX XXXX" required="">
       </div>
       <div class="modal__more-info">
         <label for="modal-more-info">Ваш вопрос</label>
-        <textarea name="more-info" id="modal-more-info" rows="6" placeholder=""></textarea>
+        <textarea name="modal-more-info" id="modal-more-info" rows="6" cols="40" placeholder=""></textarea>
       </div>
 
       <button class="modal__button" type="submit">Отправить</button>

@@ -176,7 +176,7 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 
   var input = document.querySelector('#tel');
-  var inputPhone = document.querySelector('#phone');
+  var inputPhone = document.querySelector('#modal-tel');
 
   input.addEventListener('input', mask, false);
   input.addEventListener('focus', mask, false);
@@ -189,6 +189,85 @@ window.addEventListener('DOMContentLoaded', function () {
   inputPhone.addEventListener('keydown', mask, false);
 });
 
+
+// localStorage
+
+var form = document.querySelector('.modal form');
+var submit = form.querySelector('[type=submit]');
+var checkValidity = function () {};
+
+if (form.checkValidity) {
+  checkValidity = function () {
+    submit.disabled = !form.checkValidity();
+  };
+}
+
+if (window.localStorage) {
+  var elements = form.querySelectorAll('[name]');
+  var elLength = elements.length;
+  var i;
+
+  for (i = 0; i < elLength; i++) {
+    (function (element) {
+      var name = element.getAttribute('name');
+
+      element.value = localStorage.getItem(name) || '';
+
+      element.onkeyup = function() {
+        var value = element.value;
+        if (!value) {
+          value = '';
+        }
+
+        localStorage.setItem(name, value);
+        checkValidity();
+      };
+    })(elements[i]);
+  }
+}
+
+checkValidity();
+
+// form.onsubmit = function (event) {
+//   submit.disabled = true;
+//   submit.value = 'Отправляется...';
+//
+//   if (window.localStorage) {
+//     localStorage.removeItem('message');
+//   }
+//
+//   if (window.FormData) {
+//     event.preventDefault();
+//
+//     var data = new FormData(form);
+//     var xhr = new XMLHttpRequest();
+//
+//     xhr.open('post', new Date()).getTime();
+//     xhr.open(form.getAttribute('method'), form.getAttribute('action'));
+//     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+//
+//     xhr.onreadystatechange = function () {
+//       if (xhr.readyState === 4 && xhr.status === 200) {
+//         // var message = JSON.parse(xhr.responseText);
+//         // if (message.result) {
+//         //   echo.innerHTML = message.body;
+//         //   echo.classList.remove('hidden');
+//         // } else {
+//         //   alert('Error parsing JSON');
+//         // }
+//
+//         var textarea = form.querySelector('textarea');
+//         textarea.value = '';
+//         textarea.focus();
+//
+//         submit.value = 'Отправить';
+//         checkValidity();
+//       }
+//     };
+//
+//     xhr.send(data);
+//   }
+// };
 
 // маска для формы
 // window.addEventListener('DOMContentLoaded', function () {
@@ -242,4 +321,3 @@ window.addEventListener('DOMContentLoaded', function () {
 //   inputPhone.addEventListener('focus', mask, false);
 //   inputPhone.addEventListener('blur', mask, false);
 // });
-

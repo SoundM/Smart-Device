@@ -53,6 +53,15 @@
   margin-right: 15px;
 }
 
+.footer__social-link:hover svg,
+.footer__social-link:focus svg {
+  fill: #1b2d37;
+}
+
+.footer__social-link:active svg {
+  fill: $bg-blue;
+}
+
 .footer__accordion {
   @include mp-reset;
   box-sizing: border-box;

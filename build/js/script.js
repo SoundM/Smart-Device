@@ -4,21 +4,21 @@ var KeyCode = {
   ENTER: 13,
   SPACE: 32,
 };
+var body = document.querySelector('body');
 var modal = document.querySelector('.modal');
 var openForm = document.querySelector('.page-header__open-form');
 var closeForm = document.querySelector('.modal--close-form');
+var modalContent = document.querySelector('.modal__content');
 
 modal.classList.remove('modal--nojs');
 modal.classList.remove('modal--opened');
 modal.classList.add('modal--closed');
 
-openForm.addEventListener('click', function () {
+openForm.addEventListener('click', function (event) {
+  event.stopPropagation();
   if (modal.classList.contains('modal--closed')) {
     modal.classList.remove('modal--closed');
     modal.classList.add('modal--opened');
-  } else {
-    modal.classList.add('modal--closed');
-    modal.classList.remove('modal--opened');
   }
 });
 
@@ -29,6 +29,15 @@ closeForm.addEventListener('click', function () {
 
 document.addEventListener('keydown', function (event) {
   if (event.keyCode === KeyCode.ESC) {
+    modal.classList.remove('modal--opened');
+    modal.classList.add('modal--closed');
+  }
+});
+
+// закрытие по клику на оверлей ! для корректной работы ему нужен event.stopPropagation() при открытии стр18;
+
+body.addEventListener('click', function (event) {
+  if (!modalContent.contains(event.target) && modal.classList.contains('modal--opened')) {
     modal.classList.remove('modal--opened');
     modal.classList.add('modal--closed');
   }
@@ -72,83 +81,165 @@ content2.classList.remove('accordion__show2');
 content2.classList.add('accordion__close2');
 
 button1.addEventListener('click', function () {
-  if (button1.classList.contains('accordion__button-opened1')) {
+  if (button1.classList.contains('accordion__button-opened1') && button2.classList.contains('accordion__button-opened2')) {
     button1.classList.remove('accordion__button-opened1');
     button1.classList.add('accordion__button-closed1');
     content1.classList.remove('accordion__close1');
     content1.classList.add('accordion__show1');
   } else {
-    button1.classList.remove('accordion__button-closed1');
-    button1.classList.add('accordion__button-opened1');
-    content1.classList.remove('accordion__show1');
-    content1.classList.add('accordion__close1');
+    if (button1.classList.contains('accordion__button-opened1') && button2.classList.contains('accordion__button-closed2')) {
+      button1.classList.remove('accordion__button-opened1');
+      button1.classList.add('accordion__button-closed1');
+      content1.classList.remove('accordion__close1');
+      content1.classList.add('accordion__show1');
+      button2.classList.remove('accordion__button-closed2');
+      button2.classList.add('accordion__button-opened2');
+      content2.classList.remove('accordion__show2');
+      content2.classList.add('accordion__close2');
+    } else {
+      button1.classList.remove('accordion__button-closed1');
+      button1.classList.add('accordion__button-opened1');
+      content1.classList.remove('accordion__show1');
+      content1.classList.add('accordion__close1');
+    }
   }
 });
 
 button2.addEventListener('click', function () {
-  if (button2.classList.contains('accordion__button-opened2')) {
+  if (button2.classList.contains('accordion__button-opened2') && button1.classList.contains('accordion__button-opened1')) {
     button2.classList.remove('accordion__button-opened2');
     button2.classList.add('accordion__button-closed2');
     content2.classList.remove('accordion__close2');
     content2.classList.add('accordion__show2');
   } else {
-    button2.classList.remove('accordion__button-closed2');
-    button2.classList.add('accordion__button-opened2');
-    content2.classList.remove('accordion__show2');
-    content2.classList.add('accordion__close2');
+    if (button2.classList.contains('accordion__button-opened2') && button1.classList.contains('accordion__button-closed1')) {
+      button2.classList.remove('accordion__button-opened2');
+      button2.classList.add('accordion__button-closed2');
+      content2.classList.remove('accordion__close2');
+      content2.classList.add('accordion__show2');
+      button1.classList.remove('accordion__button-closed1');
+      button1.classList.add('accordion__button-opened1');
+      content1.classList.remove('accordion__show1');
+      content1.classList.add('accordion__close1');
+    } else {
+      button2.classList.remove('accordion__button-closed2');
+      button2.classList.add('accordion__button-opened2');
+      content2.classList.remove('accordion__show2');
+      content2.classList.add('accordion__close2');
+    }
   }
 });
 
 // маска для формы
 window.addEventListener('DOMContentLoaded', function () {
-  function setCursorPosition(pos, elem) {
-    elem.focus();
-    if (elem.setSelectionRange) {
-      elem.setSelectionRange(pos, pos);
-    } else if (elem.createTextRange) {
-      var range = elem.createTextRange();
-      range.collapse(true);
-      range.moveEnd('character', pos);
-      range.moveStart('character', pos);
-      range.select();
-    }
-  }
+  var keyCode;
 
   function mask(event) {
-    var matrix = '+7 (___) ___ ____';
+    // eslint-disable-next-line no-unused-expressions
+    event.keyCode && (keyCode = event.keyCode);
+    // eslint-disable-next-line no-invalid-this
+    var pos = this.selectionStart;
+    if (pos < 3) {
+      event.preventDefault();
+    }
+
+    var matrix = '+7(___) ___ ____';
     var i = 0;
     var def = matrix.replace(/\D/g, '');
     // eslint-disable-next-line no-invalid-this
     var val = this.value.replace(/\D/g, '');
-    if (def.length >= val.length) {
-      val = def;
+    var newValue = matrix.replace(/[_\d]/g, function (a) {
+      return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+    });
+    i = newValue.indexOf('_');
+    if (i !== -1) {
+      // eslint-disable-next-line no-unused-expressions
+      i < 4 && (i = 3);
+      newValue = newValue.slice(0, i);
     }
     // eslint-disable-next-line no-invalid-this
-    this.value = matrix.replace(/./g, function (a) {
-      // eslint-disable-next-line no-nested-ternary
-      return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a;
-    });
-    if (event.type === 'blur') {
+    var reg = matrix.substr(0, this.value.length).replace(/_+/g, function (a) {
+      return '\\d{0,' + a.length + '}';
+    }).replace(/[+()]/g, '\\$&');
+    reg = new RegExp('^' + reg + '$');
+    // eslint-disable-next-line no-invalid-this
+    if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
       // eslint-disable-next-line no-invalid-this
-      if (this.value.length === 2) {
-        // eslint-disable-next-line no-invalid-this
-        this.value = '';
-      }
-    } else {
+      this.value = newValue;
+    }
+
+    // eslint-disable-next-line no-invalid-this
+    if (event.type === 'blur' && this.value.length < 5) {
       // eslint-disable-next-line no-invalid-this
-      setCursorPosition(this.value.length, this);
+      this.value = '';
     }
   }
 
-  var inputTel = document.querySelector('#tel');
+  var input = document.querySelector('#tel');
   var inputPhone = document.querySelector('#phone');
-  inputTel.addEventListener('input', mask, false);
-  inputTel.addEventListener('focus', mask, false);
-  inputTel.addEventListener('blur', mask, false);
+
+  input.addEventListener('input', mask, false);
+  input.addEventListener('focus', mask, false);
+  input.addEventListener('blur', mask, false);
+  input.addEventListener('keydown', mask, false);
 
   inputPhone.addEventListener('input', mask, false);
-
   inputPhone.addEventListener('focus', mask, false);
   inputPhone.addEventListener('blur', mask, false);
+  inputPhone.addEventListener('keydown', mask, false);
 });
+
+
+// маска для формы
+// window.addEventListener('DOMContentLoaded', function () {
+//   function setCursorPosition(pos, elem) {
+//     elem.focus();
+//     if (elem.setSelectionRange) {
+//       elem.setSelectionRange(pos, pos);
+//     } else if (elem.createTextRange) {
+//       var range = elem.createTextRange();
+//       range.collapse(true);
+//       range.moveEnd('character', pos);
+//       range.moveStart('character', pos);
+//       range.select();
+//     }
+//   }
+//
+//   function mask(event) {
+//     var matrix = '+7 (___) ___ ____';
+//     var i = 0;
+//     var def = matrix.replace(/\D/g, '');
+//     // eslint-disable-next-line no-invalid-this
+//     var val = this.value.replace(/\D/g, '');
+//     if (def.length >= val.length) {
+//       val = def;
+//     }
+//     // eslint-disable-next-line no-invalid-this
+//     this.value = matrix.replace(/./g, function (a) {
+//       // eslint-disable-next-line no-nested-ternary
+//       return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a;
+//     });
+//     if (event.type === 'blur') {
+//       // eslint-disable-next-line no-invalid-this
+//       if (this.value.length === 2) {
+//         // eslint-disable-next-line no-invalid-this
+//         this.value = '';
+//       }
+//     } else {
+//       // eslint-disable-next-line no-invalid-this
+//       setCursorPosition(this.value.length, this);
+//     }
+//   }
+//
+//   var inputTel = document.querySelector('#tel');
+//   var inputPhone = document.querySelector('#phone');
+//   inputTel.addEventListener('input', mask, false);
+//   inputTel.addEventListener('focus', mask, false);
+//   inputTel.addEventListener('blur', mask, false);
+//
+//   inputPhone.addEventListener('input', mask, false);
+//
+//   inputPhone.addEventListener('focus', mask, false);
+//   inputPhone.addEventListener('blur', mask, false);
+// });
 

@@ -14,7 +14,7 @@
   @include list-reset;
   padding-top: 22px;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   flex-wrap: wrap;
 }
 
@@ -28,9 +28,8 @@
   width: 32%;
   max-width: 370px;
   min-height: 620px;
-  //position: relative;
-  //background-color: $bg-black;
-  background-color: transparent;
+  margin-right: 20px;
+  margin-bottom: 50px;
 
   &--img {
     display: block;
@@ -89,6 +88,10 @@
       opacity: 0.1;
     }
   }
+}
+
+ul.about-service__menu li:nth-child(3n + 3) {
+  margin-right: 0;
 }
 
 @media (max-width: $tablet-width) {

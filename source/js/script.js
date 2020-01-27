@@ -1,4 +1,5 @@
 'use strict';
+// модальное окно
 var KeyCode = {
   ESC: 27,
   ENTER: 13,
@@ -9,6 +10,7 @@ var modal = document.querySelector('.modal');
 var openForm = document.querySelector('.page-header__open-form');
 var closeForm = document.querySelector('.modal--close-form');
 var modalContent = document.querySelector('.modal__content');
+var focusContent = document.querySelector('#modal-name');
 
 modal.classList.remove('modal--nojs');
 modal.classList.remove('modal--opened');
@@ -19,6 +21,7 @@ openForm.addEventListener('click', function (event) {
   if (modal.classList.contains('modal--closed')) {
     modal.classList.remove('modal--closed');
     modal.classList.add('modal--opened');
+    focusContent.focus();
   }
 });
 
@@ -40,6 +43,7 @@ body.addEventListener('click', function (event) {
   if (!modalContent.contains(event.target) && modal.classList.contains('modal--opened')) {
     modal.classList.remove('modal--opened');
     modal.classList.add('modal--closed');
+    modal.removeAttribute('onload');
   }
 });
 

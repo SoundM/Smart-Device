@@ -128,7 +128,8 @@
   background-repeat: no-repeat, no-repeat;
   background-position: calc(50% - 354px) 155px, 50% -60px;
   background-size: 511px 288px, 1920px 760px;
-  background-color: $bg-blue;
+  //background-color: $bg-blue;
+  background-color: transparent;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/paper_airplane@1x.png"), url("../img/support@2x.jpg");

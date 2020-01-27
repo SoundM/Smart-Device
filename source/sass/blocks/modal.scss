@@ -92,8 +92,20 @@
   box-sizing: border-box;
   height: 52px;
   display: flex;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   background-color: $bg-white-opacity;
+  border: 1px solid $bg-white-opacity;
+  border-radius: 2px;
+
+  &:hover {
+    border: 1px solid $bg-white;
+    border-radius: 2px;
+  }
+
+  &:focus {
+    border: 1px solid $bg-white;
+    border-radius: 2px;
+  }
 
   & label {
     display: block;
@@ -140,6 +152,7 @@
 
 .modal__more-info {
   width: 100%;
+  padding: 1px;
   height: 102px;
   margin-bottom: 30px;
   font-family: $font-family-PT-Mono;
@@ -149,6 +162,18 @@
   display: flex;
   flex-direction: column;
   background-color: $bg-white-opacity;
+  border: 1px solid $bg-white-opacity;
+  border-radius: 2px;
+
+  &:hover {
+    border: 1px solid $bg-white;
+    border-radius: 2px;
+  }
+
+  &:focus {
+    border: 1px solid $bg-white;
+    border-radius: 2px;
+  }
 
   & label {
     display: block;
@@ -170,6 +195,7 @@
     display: inline-block;
     vertical-align: middle;
     width: 100%;
+    resize: none;
     background-color: $bg-white-opacity;
     outline: none;
     border: none;

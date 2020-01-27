@@ -1,4 +1,5 @@
 'use strict';
+// модальное окно
 var KeyCode = {
   ESC: 27,
   ENTER: 13,
@@ -9,6 +10,7 @@ var modal = document.querySelector('.modal');
 var openForm = document.querySelector('.page-header__open-form');
 var closeForm = document.querySelector('.modal--close-form');
 var modalContent = document.querySelector('.modal__content');
+var focusContent = document.querySelector('#modal-name');
 
 modal.classList.remove('modal--nojs');
 modal.classList.remove('modal--opened');
@@ -19,6 +21,7 @@ openForm.addEventListener('click', function (event) {
   if (modal.classList.contains('modal--closed')) {
     modal.classList.remove('modal--closed');
     modal.classList.add('modal--opened');
+    focusContent.focus();
   }
 });
 
@@ -40,6 +43,7 @@ body.addEventListener('click', function (event) {
   if (!modalContent.contains(event.target) && modal.classList.contains('modal--opened')) {
     modal.classList.remove('modal--opened');
     modal.classList.add('modal--closed');
+    modal.removeAttribute('onload');
   }
 });
 
@@ -190,7 +194,7 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// localStorage
+// localStorage для модального окна
 
 var form = document.querySelector('.modal form');
 var submit = form.querySelector('[type=submit]');
@@ -213,7 +217,7 @@ if (window.localStorage) {
 
       element.value = localStorage.getItem(name) || '';
 
-      element.onkeyup = function() {
+      element.onkeyup = function () {
         var value = element.value;
         if (!value) {
           value = '';
@@ -228,46 +232,6 @@ if (window.localStorage) {
 
 checkValidity();
 
-// form.onsubmit = function (event) {
-//   submit.disabled = true;
-//   submit.value = 'Отправляется...';
-//
-//   if (window.localStorage) {
-//     localStorage.removeItem('message');
-//   }
-//
-//   if (window.FormData) {
-//     event.preventDefault();
-//
-//     var data = new FormData(form);
-//     var xhr = new XMLHttpRequest();
-//
-//     xhr.open('post', new Date()).getTime();
-//     xhr.open(form.getAttribute('method'), form.getAttribute('action'));
-//     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-//
-//     xhr.onreadystatechange = function () {
-//       if (xhr.readyState === 4 && xhr.status === 200) {
-//         // var message = JSON.parse(xhr.responseText);
-//         // if (message.result) {
-//         //   echo.innerHTML = message.body;
-//         //   echo.classList.remove('hidden');
-//         // } else {
-//         //   alert('Error parsing JSON');
-//         // }
-//
-//         var textarea = form.querySelector('textarea');
-//         textarea.value = '';
-//         textarea.focus();
-//
-//         submit.value = 'Отправить';
-//         checkValidity();
-//       }
-//     };
-//
-//     xhr.send(data);
-//   }
-// };
 
 // маска для формы
 // window.addEventListener('DOMContentLoaded', function () {

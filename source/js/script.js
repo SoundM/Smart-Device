@@ -80,9 +80,9 @@ button1.classList.add('accordion__button-opened1');
 content1.classList.remove('accordion__show1');
 content1.classList.add('accordion__close1');
 button2.classList.remove('accordion__nojs2');
-button2.classList.add('accordion__button-opened2');
-content2.classList.remove('accordion__show2');
-content2.classList.add('accordion__close2');
+button2.classList.add('accordion__button-closed2');
+// content2.classList.remove('accordion__show2');
+// content2.classList.add('accordion__close2');
 
 button1.addEventListener('click', function () {
   if (button1.classList.contains('accordion__button-opened1') && button2.classList.contains('accordion__button-opened2')) {

@@ -22,6 +22,7 @@
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
+    background-color: transparent;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/component-table@2x.jpg");
@@ -159,7 +160,7 @@
   padding: 0 12px;
   padding-top: 68px;
   min-height: 190px;
-  //background-color: $bg-white;
+  background-color: $bg-white;
   display: flex;
   justify-content: space-between;
 }

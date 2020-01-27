@@ -77,7 +77,7 @@
 .advantages__about-us--logo {
   box-sizing: border-box;
   min-width: 220px;
-  min-height: 317px;
+  height: 317px;
   margin-left: -30px;
   margin-right: -10px;
   background-image: url("../img/2005@1x.jpg");
@@ -122,6 +122,7 @@
   &--button {
     margin-top: 30px;
     padding-top: 14px;
+    margin-bottom: 105px;
     width: 180px;
     height: 45px;
     border: 1px solid $bg-blue;
@@ -216,7 +217,7 @@
 
   .advantages__about-us--logo {
     min-width: 244px;
-    min-height: 362px;
+    height: 362px;
     margin-right: -34px;
     margin-left: -25px;
     background-image: url("../img/2005-tablet@1x.png");
@@ -244,6 +245,7 @@
 
     &--button {
       margin-top: 127px;
+      margin-bottom: 80px;
     }
   }
 
@@ -327,6 +329,7 @@
 
     &--button {
       margin-top: 224px;
+      margin-bottom: 60px;
     }
   }
 

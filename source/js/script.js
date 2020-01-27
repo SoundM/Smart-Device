@@ -21,6 +21,7 @@ openForm.addEventListener('click', function (event) {
   if (modal.classList.contains('modal--closed')) {
     modal.classList.remove('modal--closed');
     modal.classList.add('modal--opened');
+    body.style.overflow = 'hidden';
     focusContent.focus();
   }
 });
@@ -28,12 +29,14 @@ openForm.addEventListener('click', function (event) {
 closeForm.addEventListener('click', function () {
   modal.classList.remove('modal--opened');
   modal.classList.add('modal--closed');
+  body.style.overflow = 'visible';
 });
 
 document.addEventListener('keydown', function (event) {
   if (event.keyCode === KeyCode.ESC) {
     modal.classList.remove('modal--opened');
     modal.classList.add('modal--closed');
+    body.style.overflow = 'visible';
   }
 });
 
@@ -43,7 +46,7 @@ body.addEventListener('click', function (event) {
   if (!modalContent.contains(event.target) && modal.classList.contains('modal--opened')) {
     modal.classList.remove('modal--opened');
     modal.classList.add('modal--closed');
-    modal.removeAttribute('onload');
+    body.style.overflow = 'visible';
   }
 });
 

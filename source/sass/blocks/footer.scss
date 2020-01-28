@@ -33,7 +33,7 @@
   }
 
   &--content {
-    font-family: $font-family-Roboto;
+    font-family: $font-family-Roboto-Condensed-regular;
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
@@ -87,7 +87,7 @@
   &--title {
     @include mp-reset;
     margin-bottom: 24px;
-    font-family: $font-family-Roboto;
+    font-family: $font-family-Roboto-Condensed-regular;
     font-size: 15px;
     line-height: 16px;
     display: flex;
@@ -137,7 +137,7 @@
   &--title {
     @include mp-reset;
     margin-bottom: 24px;
-    font-family: $font-family-Roboto;
+    font-family: $font-family-Roboto-Condensed-regular;
     font-size: 15px;
     line-height: 16px;
 

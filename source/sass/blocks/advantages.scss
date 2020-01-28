@@ -34,7 +34,7 @@
   &--title {
     @include text;
     margin-bottom: 25px;
-    font-family: $font-family-Roboto;
+    font-family: $font-family-Roboto-Condensed-regular;
     font-size: 24px;
     line-height: 22px;
     color: $font-blue;
@@ -103,7 +103,7 @@
     vertical-align: middle;
     margin: 0;
     margin-bottom: 12px;
-    font-family: $font-family-Roboto;
+    font-family: $font-family-Roboto-Condensed-regular;
     font-size: 36px;
     line-height: 45px;
     color: $font-black;

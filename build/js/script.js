@@ -200,14 +200,14 @@ window.addEventListener('DOMContentLoaded', function () {
 // localStorage для модального окна
 
 var form = document.querySelector('.modal form');
-var submit = form.querySelector('[type=submit]');
-var checkValidity = function () {};
-
-if (form.checkValidity) {
-  checkValidity = function () {
-    submit.disabled = !form.checkValidity();
-  };
-}
+// var submit = form.querySelector('[type=submit]');
+// var checkValidity = function () {};
+//
+// if (form.checkValidity) {
+//   checkValidity = function () {
+//     submit.disabled = !form.checkValidity();
+//   };
+// }
 
 if (window.localStorage) {
   var elements = form.querySelectorAll('[name]');
@@ -227,13 +227,13 @@ if (window.localStorage) {
         }
 
         localStorage.setItem(name, value);
-        checkValidity();
+        // checkValidity();
       };
     })(elements[i]);
   }
 }
 
-checkValidity();
+// checkValidity();
 
 
 // маска для формы

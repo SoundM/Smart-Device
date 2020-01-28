@@ -212,7 +212,7 @@
     @include mp-reset;
     box-sizing: border-box;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 0 25px;
     padding-bottom: 24px;
     min-width: 100%;
@@ -273,7 +273,7 @@
 
   .footer__more-info-content--service {
     position: absolute;
-    top: 32px;
+    top: 36px;
     left: 42.5%;
   }
 }
@@ -359,6 +359,7 @@
 
   .footer__our-address--menu {
     margin-top: 2px;
+    margin-bottom: 18px;
   }
 
   .footer__more-info {

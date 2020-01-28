@@ -171,7 +171,7 @@
   .wrapper-footer {
     /* Стили, влияющие на экраны ДО 1023px (Планшет) */
     box-sizing: border-box;
-    min-height: 374px;
+    min-height: 380px;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -194,7 +194,7 @@
   margin: 0 auto;
   max-width: 1412px;
   padding: 0 12px;
-  min-height: 29px;
+  min-height: 31px;
   padding-top: 13px;
   background-color: $bg-white;
 }
@@ -204,7 +204,7 @@
     /* Стили, влияющие на экраны ДО 1023px (Планшет) */
     min-height: 68px;
     padding: 0;
-    margin: 28px 26px 0 26px;
+    margin: 29px 26px 0 26px;
     background-color: $bg-white;
   }
 }
@@ -212,7 +212,7 @@
 @media (max-width: $mobile-width) {
   .wrapper-footer-footer {
     /* Стили, влияющие на экраны ДО 767px (Мобильные) */
-    min-height: 104px;
+    min-height: 107px;
     margin: 0 auto;
   }
 }

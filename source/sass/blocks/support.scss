@@ -281,7 +281,7 @@
       font-size: 32px;
       font-weight: 200;
       line-height: 140.62%;
-      margin: 77px 0 16px;
+      margin: 80px 0 16px;
     }
 
     &--content {
@@ -301,15 +301,18 @@
   }
 
   .support__more-info {
+    margin-top: 39px;
+    margin-bottom: 44px;
+
     & label {
       //margin-top: 42px;
       //margin-bottom: 50px;
       padding: 0 0 0 16px;
-      line-height: 54px;
+      line-height: 46px;
     }
 
     & textarea {
-      height: 119px;
+      height: 114px;
     }
   }
 
@@ -354,7 +357,7 @@
     box-sizing: border-box;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 33px;
+    margin-bottom: 30px;
 
     & label {
       @include mp-reset;
@@ -385,7 +388,7 @@
   .support__button {
     width: 100%;
     margin-bottom: 23px;
-    margin-top: 33px;
+    margin-top: 31px;
   }
 
   .support__agree {

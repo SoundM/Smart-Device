@@ -226,14 +226,14 @@
     height: 362px;
     margin-right: -34px;
     margin-left: -25px;
-    background-image: url("../img/2005-tablet@1x.png");
+    background-image: url("../img/2005-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 244px 362px;
     background-color: transparent;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/2005@2x.jpg");
+      background-image: url("../img/2005-tablet@2x.jpg");
     }
   }
 

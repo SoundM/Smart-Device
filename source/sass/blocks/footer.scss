@@ -382,6 +382,18 @@
     justify-content: start;
   }
 
+  .footer__accordion-button {
+    position: relative;
+
+    & button {
+      width: 100%;
+      position: absolute;
+      z-index: 100;
+      top: 0;
+      left: 0;
+    }
+  }
+
   .footer__about-site,
   .footer__our-address {
     @include mp-reset;

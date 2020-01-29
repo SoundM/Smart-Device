@@ -19,9 +19,9 @@
     background-image: url("../img/plus-icon.svg");
     background-repeat: no-repeat;
     background-size: 16px 16px;
+    background-position: right;
     display: block;
     margin-top: 28px;
-    margin-left: 10px;
     width: 20px;
     height: 20px;
     outline: none;
@@ -34,9 +34,9 @@
     background-image: url("../img/minus-icon.svg");
     background-repeat: no-repeat;
     background-size: 16px 2px;
+    background-position: right;
     display: block;
-    margin-top: 36px;
-    margin-left: 10px;
+    margin-top: 27px;
     width: 20px;
     height: 20px;
     outline: none;
@@ -45,7 +45,7 @@
   }
 
   .accordion__button-closed1 {
-    margin-top: 37px;
+    margin-top: 27px;
   }
 
   .accordion__nojs1,

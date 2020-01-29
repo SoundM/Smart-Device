@@ -75,13 +75,17 @@
   }
 
   &--name {
-    font-family: $font-family-Roboto-Condensed-bold;
+    font-family: $font-family-Roboto-Condensed;
+    font-style: normal;
+    font-weight: bold;
     font-size: 25px;
     line-height: 29px;
   }
 
   &--content {
-    font-family: $font-family-Roboto;
+    font-family: $font-family-Roboto-Condensed;
+    font-style: normal;
+    font-weight: 500;
     font-size: 12px;
     line-height: 14px;
     color: #788891;
@@ -110,7 +114,9 @@
 
 .menu__link--call {
   display: block;
-  font-family: $font-family-Roboto-Condensed-bold;
+  font-family: $font-family-Roboto-Condensed;
+  font-style: normal;
+  font-weight: bold;
   font-size: 14px;
   line-height: 16px;
   text-align: center;

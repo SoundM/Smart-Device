@@ -34,7 +34,9 @@
   &--title {
     @include text;
     margin-bottom: 25px;
-    font-family: $font-family-Roboto-Condensed-regular;
+    font-family: $font-family-Roboto-Condensed;
+    font-style: normal;
+    font-weight: normal;
     font-size: 24px;
     line-height: 22px;
     color: $font-blue;
@@ -103,7 +105,9 @@
     vertical-align: middle;
     margin: 0;
     margin-bottom: 12px;
-    font-family: $font-family-Roboto-Condensed-regular;
+    font-family: $font-family-Roboto-Condensed;
+    font-style: normal;
+    font-weight: normal;
     font-size: 36px;
     line-height: 45px;
     color: $font-black;
@@ -130,7 +134,9 @@
     border-radius: 5px;
     background-color: $bg-white;
 
-    font-family: $font-family-Roboto-Condensed-bold;
+    font-family: $font-family-Roboto-Condensed;
+    font-style: normal;
+    font-weight: bold;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
@@ -222,15 +228,13 @@
     margin-left: -25px;
     background-image: url("../img/2005-tablet@1x.png");
     background-repeat: no-repeat;
-    //background-size: cover;
     background-position: 0 0;
     background-size: 244px 362px;
     background-color: transparent;
-    //background-color: $bg-white;
 
-    //@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    //  background-image: url("../../img/2005@2x.jpg");
-    //}
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/2005@2x.jpg");
+    }
   }
 
   .advantages__about-us-content {

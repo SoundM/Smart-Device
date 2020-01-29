@@ -41,7 +41,6 @@ document.addEventListener('keydown', function (event) {
 });
 
 // закрытие по клику на оверлей ! для корректной работы ему нужен event.stopPropagation() при открытии стр18;
-
 body.addEventListener('click', function (event) {
   if (!modalContent.contains(event.target) && modal.classList.contains('modal--opened')) {
     modal.classList.remove('modal--opened');

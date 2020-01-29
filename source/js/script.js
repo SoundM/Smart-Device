@@ -13,8 +13,6 @@ var modalContent = document.querySelector('.modal__content');
 var focusContent = document.querySelector('#modal-name');
 
 modal.classList.remove('modal--nojs');
-modal.classList.remove('modal--opened');
-modal.classList.add('modal--closed');
 
 openForm.addEventListener('click', function (event) {
   event.stopPropagation();
@@ -26,26 +24,26 @@ openForm.addEventListener('click', function (event) {
   }
 });
 
-closeForm.addEventListener('click', function () {
+var getModalClose = function () {
   modal.classList.remove('modal--opened');
   modal.classList.add('modal--closed');
   body.style.overflow = 'visible';
+};
+
+closeForm.addEventListener('click', function () {
+  getModalClose();
 });
 
 document.addEventListener('keydown', function (event) {
   if (event.keyCode === KeyCode.ESC) {
-    modal.classList.remove('modal--opened');
-    modal.classList.add('modal--closed');
-    body.style.overflow = 'visible';
+    getModalClose();
   }
 });
 
 // закрытие по клику на оверлей ! для корректной работы ему нужен event.stopPropagation() при открытии стр18;
 body.addEventListener('click', function (event) {
   if (!modalContent.contains(event.target) && modal.classList.contains('modal--opened')) {
-    modal.classList.remove('modal--opened');
-    modal.classList.add('modal--closed');
-    body.style.overflow = 'visible';
+    getModalClose();
   }
 });
 
@@ -56,18 +54,19 @@ var yak2 = document.querySelector('a[href="#yak2"]');
 var place1 = document.getElementById('#yak1');
 var place2 = document.getElementById('#yak2');
 
-yak1.addEventListener('click', function () {
-  place1.scrollIntoView({
+var goHref = function (place) {
+  place.scrollIntoView({
     behavior: 'smooth',
     block: 'start',
   });
+};
+
+yak1.addEventListener('click', function () {
+  goHref(place1);
 });
 
 yak2.addEventListener('click', function () {
-  place2.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
-  });
+  goHref(place2);
 });
 
 // Accordion

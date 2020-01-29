@@ -76,6 +76,21 @@
     position: absolute;
     right: 20px;
     top: 20px;
+
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+    &:focus {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+    &:active {
+      opacity: 0.8;
+      cursor: pointer;
+    }
   }
 }
 
@@ -237,16 +252,19 @@
   &:hover {
     background-color: $bg-blue;
     opacity: 0.7;
+    cursor: pointer;
   }
 
   &:focus {
     background-color: $bg-blue;
     opacity: 0.7;
+    cursor: pointer;
   }
 
   &:active {
     background-color: $bg-blue;
     opacity: 0.4;
+    cursor: pointer;
   }
 }
 
@@ -256,19 +274,25 @@
   font-size: 14px;
   line-height: 16px;
   color: $font-white;
-
-  opacity: 0.8;
-}
-
-.modal__agree label {
   position: relative;
-  display: block;
-  width: 100%;
-  padding-top: 9px;
-  padding-left: 48px;
+  opacity: 0.8;
 
-  cursor: pointer;
-  user-select: none;
+  & label {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 9px;
+    padding-left: 48px;
+
+    cursor: pointer;
+    user-select: none;
+  }
+
+  & input {
+    position: absolute;
+    top: 23px;
+    left: 10px;
+  }
 }
 
 .modal__agree input + label::before {

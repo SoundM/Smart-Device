@@ -40,6 +40,21 @@
     letter-spacing: 0.075em;
     color: #788891;
   }
+
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  &:focus {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.8;
+    cursor: pointer;
+  }
 }
 
 
@@ -56,10 +71,12 @@
 .footer__social-link:hover svg,
 .footer__social-link:focus svg {
   fill: #1b2d37;
+  cursor: pointer;
 }
 
 .footer__social-link:active svg {
   fill: $bg-blue;
+  cursor: pointer;
 }
 
 .footer__accordion {
@@ -98,12 +115,28 @@
     color: #1b2d37;
   }
 
-  &--item {
+  &--item a {
     font-family: $font-family-PT-Mono;
     font-size: 15px;
     line-height: 25px;
     color: #1b2d37;
     opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    &:focus {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    &:active {
+      opacity: 1;
+      color: $font-blue;
+      cursor: pointer;
+    }
   }
 }
 
@@ -121,12 +154,28 @@
   @include list-reset;
   width: 169px;
 
-  &--item {
+  &--item a {
     font-family: $font-family-PT-Mono;
     font-size: 15px;
     line-height: 26px;
     color: #1b2d37;
     opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    &:focus {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    &:active {
+      opacity: 1;
+      color: $font-blue;
+      cursor: pointer;
+    }
   }
 }
 
@@ -153,13 +202,29 @@
     @include list-reset;
   }
 
-  &--content {
+  &--content a {
     font-family: $font-family-PT-Mono;
     font-size: 15px;
     line-height: 25px;
 
     color: #1b2d37;
     opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    &:focus {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    &:active {
+      opacity: 1;
+      color: $font-blue;
+      cursor: pointer;
+    }
   }
 }
 

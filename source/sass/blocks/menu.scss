@@ -38,14 +38,17 @@
 
     &:hover {
       opacity: 0.5;
+      cursor: pointer;
     }
 
     &:focus {
       opacity: 0.5;
+      cursor: pointer;
     }
 
     &:active {
       opacity: 0.8;
+      cursor: pointer;
     }
   }
 }
